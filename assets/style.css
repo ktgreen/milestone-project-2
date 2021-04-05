@@ -1,0 +1,39 @@
+/* Colours */
+
+body {
+  background-color: #88CCF1;
+  font-family: 'Source Sans Pro';
+  color: #393E41;
+}
+
+header {
+    height: 150px;
+    width: 100%;
+}
+
+.header-top {
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #EF2D56
+}
+
+h2 {
+    font-family: 'Train One';
+    font-size: 66px;
+}
+
+.intro {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+ .block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #4CAF50;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
