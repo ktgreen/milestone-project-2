@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Train+One&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Train+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css" type="text/css">
 </head>
 
 <body>
 
-    <!-- Header --> 
+    <!-- Header -->
     <header class="header-top">
-        <h2>Memory Game</h2>
+        <div><h2>Memory Game</h2></div>
     </header>
 
     <!-- Introduction -->
@@ -21,18 +24,26 @@
         <div class="intro">
             <p>Test your memory!</p>
             <p>Can you remember all of the animals in sequence?</p>
-            <p>Please pick your difficulty!:</p>
+            <p>Pick your difficulty!</p>
         </div>
     </container>
-    <div class="difficulty">
-        <button type="button" class="difficulty-btn" onclick="document.location='easy.html'">Easy</button>
-    </div>
+    <container>
+        <div class="difficulty">
+            <button type="button" class="difficulty-btn" onclick="document.location='easy.html'">Easy</button>
+        </div>
+        <div class="difficulty">
+            <button type="button" class="difficulty-btn" onclick="document.location='medium.html'">Medium</button>
+        </div>
+        <div class="difficulty">
+            <button type="button" class="difficulty-btn" onclick="document.location='hard.html'">Hard</button>
+        </div>
+    </container>
 
     <!-- Footer -->
     <footer>
-        
+
     </footer>
-    
+
 </body>
 
 </html>

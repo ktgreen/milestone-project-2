@@ -1,4 +1,7 @@
 /* Colours */
+a:link{
+  text-decoration: none!important;
+}
 
 body {
   background-color: #88CCF1;
@@ -7,19 +10,24 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 200px;
     width: 100%;
 }
 
 .header-top {
     text-align: center;
     letter-spacing: 0.1em;
-    color: #EF2D56
+    color: #0A855C;
+    padding-top: 25px;
 }
 
 h2 {
     font-family: 'Train One';
-    font-size: 66px;
+    font-size: 70px;
+}
+
+h2 a {
+        color: #0A855C;
 }
 
 .intro {
@@ -27,13 +35,20 @@ h2 {
     text-align: center;
 }
 
- .block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #4CAF50;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
+
+/* Homepage Buttons */
+
+.difficulty {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+ .difficulty-btn {
+  font-size: 30px;
+  font-weight: 600;
+  color: #EF2D56;
+  font-family: 'Source Sans Pro';
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #FFC857;
 }
