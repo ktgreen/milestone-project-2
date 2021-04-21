@@ -14,7 +14,7 @@ body {
     text-align: center;
     letter-spacing: 0.1em;
     color: #0A855C;
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 50px;
 }
 
@@ -59,4 +59,27 @@ h2 a {
   text-transform: uppercase;
   border-radius: 12px;
   background-color: #FFC857;
+}
+
+/* Easy Images */
+
+div .easy-img {
+  display: block;
+  margin: auto;
+  width: 250px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Active Image */
+
+.active {
+  filter: invert(1);
+}
+
+/* Image Shadow */
+
+.easy-img:hover {
+    border: 2px #393E41
 }
