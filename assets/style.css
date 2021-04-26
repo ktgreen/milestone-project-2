@@ -14,13 +14,18 @@ body {
     text-align: center;
     letter-spacing: 0.1em;
     color: #0A855C;
-    padding-top: 75px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
 h2 {
     font-family: 'Train One';
     font-size: 70px;
+    padding-bottom: 20px;
+}
+
+h2 a:hover {
+        color: #EF2D56;
 }
 
 h2 a {
@@ -39,8 +44,7 @@ h2 a {
     font-weight: 100;
     background-color: #EF2D56;
     color: #FFC857;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 15px;
 }
 
 
@@ -63,7 +67,7 @@ h2 a {
 
 /* Easy Images */
 
-div .easy-img {
+div .easyimg {
   display: block;
   margin: auto;
   width: 250px;
@@ -71,6 +75,69 @@ div .easy-img {
   border-radius: 50px;
   cursor: pointer;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    text-align: center;
+    margin: auto;
+    grid-gap: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    height: 100px;
+    width: 100px;
+    background-color: #393E41;
+    border-radius: 10px;
+}
+
+.card-back-text {
+    color: #EF2D56;
+    padding-top: 0.25em;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+
+.info {
+    font-family: 'Train One';
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.info-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    margin: left;
+    padding-right: 12%;
+}
+
+/* Media */
+
+@media (max-width: 650px) {
+  .grid-container {
+    padding: 5% 5% 5% 5%;
+  }
+  .grid-item {
+    height: 75px;
+    width: 75px;
+    }
+  .card-back-text {
+    font-size: 35px;
+    padding-top: 0.25em;
+    }
+  h2 {
+    font-family: 'Train One';
+    font-size: 50px;
+    }
+  }
 
 /* Active Image */
 
@@ -80,6 +147,6 @@ div .easy-img {
 
 /* Image Shadow */
 
-.easy-img:hover {
+.easyimg:hover {
     border: 2px #393E41
 }
