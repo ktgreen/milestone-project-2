@@ -6,8 +6,9 @@ a:link{
 
 body {
   background-color: #88CCF1;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #393E41;
+  overflow-x: hidden;
 }
 
 .header-top {
@@ -19,7 +20,7 @@ body {
 }
 
 h2 {
-    font-family: 'Train One';
+    font-family: 'Train One', sans-serif;
     font-size: 70px;
     padding-bottom: 20px;
 }
@@ -38,7 +39,7 @@ h2 a {
 }
 
 .difficulty-title {
-    font-family: 'Train One';
+    font-family: 'Train One', sans-serif;
     font-size: 35px;
     letter-spacing: 0.2em;
     font-weight: 100;
@@ -47,8 +48,19 @@ h2 a {
     padding: 15px;
 }
 
+.game-over-text {
+    font-family: 'Train One', sans-serif;
+    font-size: 35px;
+    letter-spacing: 0.2em;
+    font-weight: 100;
+    background-color: #EF2D56;
+    color: #FFC857;
+    padding: 15px;
+    border-radius: 12px;
+}
 
-/* Homepage Buttons */
+
+/* Buttons */
 
 .difficulty {
     padding: 20px 20px;
@@ -59,54 +71,46 @@ h2 a {
   font-size: 30px;
   font-weight: 600;
   color: #EF2D56;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   text-transform: uppercase;
   border-radius: 12px;
   background-color: #FFC857;
 }
 
-/* Easy Images */
-
-div .easyimg {
-  display: block;
-  margin: auto;
-  width: 250px;
-  padding-bottom: 10px;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    text-align: center;
-    margin: auto;
-    grid-gap: 10px;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 10%;
+.screen-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    z-index: 100;
+    transition: background-color 500ms, font-size 500ms;
 }
 
-.grid-item {
-    height: 100px;
-    width: 100px;
-    background-color: #393E41;
-    border-radius: 10px;
+.screen-cover.visible {
+    flex-direction: column;
+    display: flex;
+    animation: game-screen 1000ms forwards;
 }
 
-.card-back-text {
-    color: #EF2D56;
-    padding-top: 0.25em;
-    font-size: 50px;
-    font-weight: 700;
+@keyframes game-screen {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 5em;
+    }
 }
 
-
+/* Game Info */
 
 .info {
-    font-family: 'Train One';
+    font-family: 'Train One', sans sans-serif;
     font-weight: 600;
     font-size: 2em;
 }
@@ -119,34 +123,94 @@ div .easyimg {
     padding-right: 12%;
 }
 
-/* Media */
+/* Grids */
 
-@media (max-width: 650px) {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 23.5%);
+    text-align: center;
+    position: relative;
+    margin: auto;
+    grid-gap: 10px;
+    padding-left: 25%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item-face {
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
+}
+
+/* Item Backs */
+
+.item-back {
+    position: absolute;
+    font-family: 'Train One', sans-serif;
+    background-color: #393E41;
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
+    color: #EF2D56;
+    padding-top: 0.25em;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* Item Fronts */
+
+.item-back:hover {
+    border: 3px solid #EF2D56;
+    transition: 100ms ease-in-out;
+}
+
+.grid-item.visible .item-back {
+    transform: rotateY(-180deg);
+}
+
+.grid-item.visible .item-front {
+    transform: rotateY(0);
+}
+
+/* Media Responsiveness */
+
+@media (max-width: 680px) {
   .grid-container {
-    padding: 5% 5% 5% 5%;
+    padding: 2% 2% 2% 2%;
   }
-  .grid-item {
-    height: 75px;
-    width: 75px;
+  .item-back {
+    height: 78px;
+    width: 78px;
     }
-  .card-back-text {
+  .item-back {
     font-size: 35px;
     padding-top: 0.25em;
     }
+  .item-face {
+    height: 78px;
+    width: 78px;
+    }
+  .item-front {
+    height: 78px;
+    width: 78px;
+    }
   h2 {
-    font-family: 'Train One';
+    font-family: 'Train One', sans-serif;
     font-size: 50px;
     }
+  header {
+      padding-top: 20px;
+      padding-bottom: 15px;
   }
-
-/* Active Image */
-
-.active {
-  filter: invert(1);
-}
-
-/* Image Shadow */
-
-.easyimg:hover {
-    border: 2px #393E41
-}
+  }
