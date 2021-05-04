@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Train+One&display=swap"
         rel="stylesheet">
@@ -22,41 +23,86 @@
         <div>
             <h2><a href="index.html">Memory Game</a></h2>
         </div>
-        <h4 class="difficulty-title">Hard</h4>
-    </header>
+        <h4 class="difficulty-title">Medium</h4>
+    </header> 
+
+    <div class="screen-cover visible">
+        <h2 class="game-text">Can You Match All The Cards?</h2>
+        <h3>&nbsp;</h3>
+        <button type="button" class="difficulty-btn">Start</button>
+        <h3>&nbsp;</h3>
+        <button type="button" class="difficulty-btn" onclick="document.location='index.html'">Back to Difficulty Select</button>
+    </div>
+    <div id="time-up" class="screen-cover">
+        <h2 class="game-text">Time's Up!</h2>
+        <button type="button" class="difficulty-btn" onclick="window.location.reload()">Play Again</button>
+    </div>
+    <div id="game-won" class="screen-cover">
+        <h2 class="game-text">Congratulations! You Won!</h2>
+        <button type="button" class="difficulty-btn" onclick="window.location.reload()">Play Again</button>
+    </div>
+
+
 
     <!-- Pictures -->
-<div class="container">
-<div class="row">
-    <div class="col-4">
-        <img src="assets/img/elephant-3156768_960_720.png" alt="Elephant" class="easyimg easy-card" id="elephant">
+    <div class="grid-container easy">
+        <div class="info-row">
+            <div class="info">Time: <span id="time-left">60</span></div>
+
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/giraffe-2521453_960_720.png" alt="giraffe">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/elephant-3156768_960_720.png" alt="elephant">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/monster-4278973_960_720.png" alt="monster">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/elephant-3156768_960_720.png" alt="elephant">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/sheep-4668044_960_720.png" alt="sheep">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/giraffe-2521453_960_720.png" alt="giraffe">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/monster-4278973_960_720.png" alt="monster">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-back">?</div>
+            <div class="item-front">
+                <img class="item-face" src="assets/img/sheep-4668044_960_720.png" alt="sheep">
+            </div>
+        </div>
     </div>
-    <div class="col-4">
-        <span>Result</span>
-    </div>
-    <div class="col-4">
-       <img src="assets/img/monster-4278973_960_720.png" alt="Monster" class="easyimg easy-card" id="monster">
-    </div>
-</div>
-</div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        <img src="assets/img/chicken-2521141_720.png" alt="Chicken" class="easyimg easy-card" id="chicken">
-    </div>
-    <div class="col-4">
-    </div>
-      <div class="col-sm-4">
-        <img src="assets/img/bee-2519764_960_720.png" alt="Bee" class="easyimg easy-card" id="bee">
-    </div>
-  </div>
-</div>
-
-    <footer>
-    </footer>
-    <script src="assets/game-easy.js"></script>
+    <script src="assets/game-medium.js"></script>
 </body>
+
 
 </html>

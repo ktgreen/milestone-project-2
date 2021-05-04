@@ -113,7 +113,7 @@ class MemoryGame {
 
 var screen = $(".screen-cover").toArray();
 var gridItems = $(".grid-item").toArray();
-var newGame = new MemoryGame(60, gridItems);
+var newGame = new MemoryGame(180, gridItems);
 
 $(screen).click(function () {
     //start game

@@ -139,6 +139,34 @@ h2 a {
     justify-content: center;
 }
 
+.grid-container.medium {
+    display: grid;
+    grid-template-columns: repeat(3, 23.5%);
+    text-align: center;
+    position: relative;
+    margin: auto;
+    grid-gap: 10px;
+    padding-left: 25%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container.easy {
+    display: grid;
+    grid-template-columns: repeat(2, 23.5%);
+    text-align: center;
+    position: relative;
+    margin: auto;
+    grid-gap: 10px;
+    padding-left: 25%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
 .grid-item {
     position: relative;
     height: 100px;
