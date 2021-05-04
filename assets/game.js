@@ -1,23 +1,68 @@
 // -timer, -score, -shuffle
 
+var gridItemOne, gridItemTwo;
+
+// constructor for game
 class MemoryGame {
     constructor(startTime, gridItems) {
+        // card array
         this.itemsArray = gridItems;
+        // seconds on clock
         this.startTime = startTime;
-        this.timeRemaining = startTime;
-        this.countdown = document.getElementById('time-left');
-        this.score = document.getElementById('correct-answers');
+        // time left on clock countdown
+        this.timeLeft = startTime;
+        // pull time from id
+        this.timer = $("#time-left")[0];
+        // pull score from id
+        this.score = $("#correct-answers")[0];
     }
-    startGame() {
+    startGame() {        // check card
         this.gridItemCheck = null;
+        // set score to 0
         this.totalScore = 0;
+        // reset time
         this.timeRemaining = this.startTime;
+        // array for matched cards
         this.pairedGridItem = [];
+        // busy true before game start
         this.busy = true;
-        this.shuffleCards(this.itemsArray);
+        // timeout for game to start
+        setTimeout(() => {
+            this.shuffleCards(this.itemsArray);
+            this.clock = this.startClock();
+            // busy false when game started
+            this.busy = false;
+        }, 1000);
+        // backs of cards showing, reset game
+        this.showBacks();
+        this.timer.innerText = this.timeLeft;
+        this.score.innerText = this.totalScore;
+    }
+    showBacks() {
+        this.itemsArray.forEach(card => {
+            card.classList.remove('visible');
+        })
     }
 
-    shuffleCards(itemsArray) { // Fisher-Yates Shuffle Algorithm
+    startClock() {
+        return setInterval(() => {
+            this.timeLeft--;
+            this.timer.innerText = this.timeLeft;
+            if(this.timeLeft === 0)
+                this.gameOver();
+        }, 1000);
+    }
+
+
+    gameOver() {
+        $("#time-up").addClass("visible");
+    }
+
+    gameWon() {
+        $("#game-won").addClass("visible");
+    }
+    //shuffle cards
+    shuffleCards(itemsArray) { // fisher-yates shuffle from medium.com
         for (let i = itemsArray.length - 1; i > 0; i--) {
             let rand = Math.floor(Math.random() * (i + 1));
             itemsArray[rand].style.order = i;
@@ -60,4 +105,3 @@ gridItems.forEach(gridItem => {
     )
 })
 
-//shuffle cards
