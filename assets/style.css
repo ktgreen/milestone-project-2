@@ -21,7 +21,7 @@ body {
 
 h2 {
     font-family: 'Train One', sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     padding-bottom: 20px;
 }
 
@@ -48,7 +48,7 @@ h2 a {
     padding: 15px;
 }
 
-.game-over-text {
+.game-text {
     font-family: 'Train One', sans-serif;
     font-size: 35px;
     letter-spacing: 0.2em;
@@ -93,7 +93,7 @@ h2 a {
 .screen-cover.visible {
     flex-direction: column;
     display: flex;
-    animation: game-screen 1000ms forwards;
+    animation: game-screen 150ms forwards;
 }
 
 @keyframes game-screen {
