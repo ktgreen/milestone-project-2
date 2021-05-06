@@ -214,9 +214,20 @@ h2 a {
 /* Media Responsiveness */
 
 @media (max-width: 680px) {
-  .grid-container {
+    .grid-container {
     padding: 2% 2% 2% 2%;
   }
+  .grid-container.medium {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+.grid-container.easy {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
   .item-back {
     height: 78px;
     width: 78px;

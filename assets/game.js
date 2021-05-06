@@ -89,10 +89,12 @@ class MemoryGame {
     }
 
     gameOver() {
+        clearInterval(this.clock);
         $("#time-up").addClass("visible");
     }
 
     gameWon() {
+        clearInterval(this.clock);
         $("#game-won").addClass("visible");
     }
 
