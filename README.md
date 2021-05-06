@@ -69,7 +69,7 @@ I extensively tested the card game using Mozilla Firefox and also tested in Goog
 
 #### GitHub Pages
 
-I followed the instructions on how to deploy to [GitHub Pages](https://pages.github.com/) from my GitHub account, which is where my website is currently deployed: [https://8000-red-kite-p8dwypqr.ws-eu03.gitpod.io/](https://8000-red-kite-p8dwypqr.ws-eu03.gitpod.io/index.html)
+I followed the instructions on how to deploy to [GitHub Pages](https://pages.github.com/) from my GitHub account, which is where my website is currently deployed: [https://ktgreen.github.io/milestone-project-2/](https://ktgreen.github.io/milestone-project-2/)
 
 After navigating to my repository, I clicked 'Settings' and then scrolled down until I found the settings for GitHub Pages. After choosing a source (I chose 'master') within this setting, it then deploys the page with the changes that have been pushed in Git to it's own page.
 
@@ -94,8 +94,6 @@ I used a tutorial to aid with the JavaScript elements from YouTube creator [Web 
  * [Coolors](https://coolors.co/) - aiding in the creation of the palette for my website
  * [Hover.css](https://ianlunn.github.io/Hover/) - for navbar animation
  * [W3Schools](https://www.w3schools.com/) - easy-to-follow guidance on HTML and CSS
- * [Balsamiq](https://balsamiq.com/) - wireframe creation
- * [Font Awesome](https://fontawesome.com/) - social media icons
  * [Codepen - Sosuke](https://codepen.io/sosuke/pen/Pjoqqp) - provided CSS filters to change colour of logo image when hovering
  * [GitPod](https://gitpod.io/) - IDE providing development environment
  * [GitHub](https://github.com/) - internet hosting for software development
