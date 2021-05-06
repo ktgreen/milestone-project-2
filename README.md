@@ -63,15 +63,13 @@ Media sources are listed at the end of this README in the Credits section
 
 After general spellcheck and housekeeping within GitPod, my initial tests for the webpage were using [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/), a common browser with facilities to also view the webpage in mobile resolutions using the developer tools
 
-#### Testing
-
-#### User Stories
+I extensively tested the card game using Mozilla Firefox and also tested in Google Chrome and Safari.
 
 ## Deployment
 
 #### GitHub Pages
 
-I followed the instructions on how to deploy to [GitHub Pages](https://pages.github.com/) from my GitHub account, which is where my website is currently deployed: [https://ktgreen.github.io/citizen-eyewear/](https://ktgreen.github.io/citizen-eyewear/)
+I followed the instructions on how to deploy to [GitHub Pages](https://pages.github.com/) from my GitHub account, which is where my website is currently deployed: [https://8000-red-kite-p8dwypqr.ws-eu03.gitpod.io/](https://8000-red-kite-p8dwypqr.ws-eu03.gitpod.io/index.html)
 
 After navigating to my repository, I clicked 'Settings' and then scrolled down until I found the settings for GitHub Pages. After choosing a source (I chose 'master') within this setting, it then deploys the page with the changes that have been pushed in Git to it's own page.
 
@@ -79,12 +77,17 @@ After navigating to my repository, I clicked 'Settings' and then scrolled down u
 
 #### Content 
 
+I wrote all content myself
+
+I used a tutorial to aid with the JavaScript elements from YouTube creator [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
+
  #### Media
 
 * I sourced my card images from [Pixabay](https://pixabay.com/photos/) which is an image-hosting site providing free images for personal and commercial use
 
 #### Acknowledgements
 
+ * [Web Dev Simplified on YouTube](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
  * [Code Institute](https://codeinstitute.net/)
  * [Bootstrap](https://getbootstrap.com/) - the Bootstrap grid and boilerplate code - grid system and pre-coded elements
  * [Google Fonts](https://fonts.google.com) - providing fonts
